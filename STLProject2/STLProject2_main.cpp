@@ -71,7 +71,7 @@ int main()
 		{
 		case 1:
 			Turbocc::clrscr();
-			x = 1;
+			x = 2;
 			y = 1;
 			game::DrawScreen();
 			Turbocc::gotoxy(BX + x * 2, BY + y);
@@ -98,7 +98,9 @@ int main()
 					}
 					Turbocc::clrscr();
 					game::DrawScreen();
+					
 					Point pTemp{ 1, 1 };
+					game::printBrick(TRUE, pTemp.x, pTemp.y);
 					char buf[20];
 					auto start = std::chrono::high_resolution_clock::now();
 					for (auto p = save.cbegin(); p != save.cend(); ++p) // save의반복자의 키로 시간순서대로 좌표에 플레이어 출력

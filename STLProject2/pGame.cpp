@@ -32,7 +32,6 @@ void game::processKey() {
 	std::map<double, Point> m; // <키입력시간,좌표> 맵변수 선언
 	int x = 1, y = 1;
 	int ch;
-
 	while (true) {
 		if (_kbhit()) { 
 			ch = _getch();
